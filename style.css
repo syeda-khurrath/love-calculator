@@ -1,0 +1,40 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+  background-image: radial-gradient(
+      rgba(0, 0, 0, 0.61) 50%,
+      rgba(0, 0, 0, 0.616)
+    ),
+    url(img/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+h1,
+p {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.myform inputs {
+  display: flex;
+  justify-content: center;
+}
+.myform .myinput {
+  border-radius: 40em;
+  border: 1px solid pink;
+  background-color: pink;
+  outline: none;
+  padding: 0.5em;
+}
+#show h1 {
+  color: rgb(255, 215, 227);
+}
+.head {
+  background-color: rgba(250, 95, 95, 0.61);
+  padding: 0.5em;
+  text-align: center;
+}
