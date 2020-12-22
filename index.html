@@ -28,6 +28,7 @@
         </p>
     </div>
     <div id="show">
+        <h1 id="msg" style="color: rgb(255, 0, 51);"></h1>
         <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" id="FirstName"></h1>
         <p style="color: rgb(255, 0, 51); font-family:fantasy ;font-size:30px">Loves</p>
         <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" id="SecName"></h1>
@@ -50,37 +51,36 @@
     <div>
         <p>SkillFully designed by Syeda Khurrath</p>
     </div>
-    <script>
-
-
-
-
-
+   <script>
         var btnOnclick = document.getElementById("Submit");
-
-
-
-
 
         function calculate() {
             var n = Math.floor(Math.random() * 100) + 1;
             var userName = document.getElementById("userName").value.toUpperCase();
             var crushName = document.getElementById("crushName").value.toUpperCase();
-            document.getElementById("FirstName").innerHTML = userName;
-            document.getElementById("SecName").innerHTML = crushName;
-            document.getElementById("num").innerHTML = n + "%";
+            if (userName && crushName) {
+                document.getElementById("FirstName").innerHTML = userName;
+                document.getElementById("SecName").innerHTML = crushName;
+                document.getElementById("num").innerHTML = n + "%";
+                var msg = document.getElementById("msg");
 
+                if (n >= 80) {
+                    msg.innerHTML = "WoW Congratulations 😍"
+                }
+                else if (n >= 50) {
+                    msg.innerHTML = "That's Good 😗"
+                }
+                else {
+                    msg.innerHTML = "Not So Good 😞"
+                }
+            }
+            else {
+                alert("Enter thr Names");
+            }
         }
         btnOnclick.onclick = calculate;
 
-
-
-
-
-
     </script>
-
-
 
 
 
